@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Interactuando con nuestro Smart Contract desde una web app React
+## Ejemplo simple de una dApp React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este web app fue programada en el stream de **web3es** el miércoles 7 de abril de 2022 transmitido en [Twitch](https://www.twitch.tv/web3es).
 
-## Available Scripts
+## Criptdle
 
-In the project directory, you can run:
+Tras haber creado un primer acercamiento a un Smart Contract para [Criptdle](https://www.criptdle.com/) (el espectacular juego de [Solow](https://solow.io/) que nos propone adivinar y aprender una nueva palabra del mundo cripto cada día), decidimos crear una web app React para interactuar con el mismo.
 
-### `npm start`
+- Por un lado podremos ver la lista de palabras
+- Y además crear una nueva palabra, agregándola a la blockchain
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías y herramientas usadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [React](https://es.reactjs.org/) - React es una biblioteca de JavaScript para construir interfaces de usuario.
+- [Ethers](https://docs.ethers.io/v5/) - Ethers en una librería de Javascript para interactuar con la blockchain de Ethereum.
+- [Vercel](https://vercel.com/) - Vercel es una plataforma de hosting de servicios de desarrollo web.
 
-### `npm test`
+## Test deploy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Publicado en Vercel: [https://panel-criptdle.vercel.app/](https://panel-criptdle.vercel.app/)
