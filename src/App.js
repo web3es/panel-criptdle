@@ -66,15 +66,18 @@ function App() {
       <button onClick={fetchWords}>Traer las palabras</button>
       <br />
       <br />
+      <br />
       <input
-        placeholder="Nueva palabra"
+        placeholder="Nueva palabra..."
         onChange={(e) => setWord(e.target.value)}
       />
+      <br />
+      <br />
       <button onClick={newWord}>Crear palabra</button>
 
       <br />
       <br />
-      {isLoading && <p>Cargando...</p>}
+      {isLoading && <div className="Loading"></div>}
       <ul className="Words">
         {words.map((word) => (
           <li key={word}>{word}</li>
