@@ -1,7 +1,7 @@
 # Interactuando con nuestro Smart Contract desde una web app React
 ## Ejemplo simple de una dApp React
 
-Este web app fue programada en el stream de **web3es** el miércoles 7 de abril de 2022 transmitido en [Twitch](https://www.twitch.tv/web3es).
+Este web app fue programada en el stream de **web3es** el miércoles 6 de abril de 2022 transmitido en [Twitch](https://www.twitch.tv/web3es).
 
 ## Criptdle
 
