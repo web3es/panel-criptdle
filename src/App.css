@@ -62,6 +62,10 @@ button:active {
   left: 5px;
 }
 
+button:hover {
+  background-color: white;
+}
+
 input {
   font-size: 16px;
   border: 3px solid;
