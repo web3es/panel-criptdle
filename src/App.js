@@ -3,9 +3,9 @@ import "./App.css";
 import { ethers } from "ethers"; // librería para interactuar con nuestro smart contract
 import { useState } from "react";
 
-import Criptdle from "./contract/Cripdle.json"; // ABI
+import Criptdle from "./contract/Criptdle.json"; // ABI
 
-const criptdleAddress = "0xc13A13144D2E68ACa1e1e6Fd6d75aADD4737814C"; // la dirección de nuestro smart contract
+const criptdleAddress = "0x484BeEe231e6decD5988e20663538D8722e83733"; // la dirección de nuestro smart contract
 
 function App() {
   const [words, setWords] = useState([]); // para guardar las palabras que obtengamos del readWords()
