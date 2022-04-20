@@ -12,6 +12,7 @@ function App() {
   const [word, setWord] = useState(""); // para guardar la palabra que el usuario escribe en el input
   const [isLoading, setIsLoading] = useState(false); // para indicar al usuario que la info se está cargando
   const [randomWord, setRandomWord] = useState();
+  const [isUsed, setIsUsed] = useState();
 
   async function fetchWords() {
     // función que trae las palabras de la blockchain, usando la función readWords() de nuestro smart contract
@@ -84,6 +85,34 @@ function App() {
     }
   }
 
+
+  async function checkIfIsUsed() {
+    // función que comprobará si la palabra está usada
+    if (typeof window.ethereum !== "undefined") {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(
+        criptdleAddress,
+        Criptdle.abi,
+        provider
+      );
+      try {
+        const data = await contract.isUsed(randomWord);
+        
+        if(data) {
+          setIsUsed("Ya se usó :(");
+        } else {
+          setIsUsed("Messirve");
+        }
+
+
+      } catch (err) {
+        console.log("Error: ", err);
+      }
+    } else {
+      alert("Tenés que tener Metamask instalada.");
+    }
+  }
+
   return (
     <div className="App">
       <button onClick={fetchWords}>Ver todas las palabras</button>
@@ -115,6 +144,14 @@ function App() {
       <button onClick={fetchWord}>Traer palabra al azar</button>
       <br />
       {randomWord}
+
+
+      <br />
+      <br />
+
+      <button onClick={checkIfIsUsed}>¿Se usó esta palabra?</button>
+      <br />
+      {isUsed}
     </div>
   );
 }
