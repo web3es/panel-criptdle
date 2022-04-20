@@ -9,7 +9,7 @@ const criptdleAddress = "0x484BeEe231e6decD5988e20663538D8722e83733"; // la dire
 
 function App() {
   const [words, setWords] = useState([]); // para guardar las palabras que obtengamos del readWords()
-  const [word, setWord] = useState(); // para guardar la palabra que el usuario escribe en el input
+  const [word, setWord] = useState(""); // para guardar la palabra que el usuario escribe en el input
   const [isLoading, setIsLoading] = useState(false); // para indicar al usuario que la info se está cargando
 
   async function fetchWords() {
@@ -57,6 +57,7 @@ function App() {
       const transaction = await contract.createWord(word);
       await transaction.wait();
       fetchWords();
+      setWord("");
       setIsLoading(false);
     }
   }
@@ -70,6 +71,7 @@ function App() {
       <input
         placeholder="Nueva palabra..."
         onChange={(e) => setWord(e.target.value)}
+        value={word}
       />
       <br />
       <br />
