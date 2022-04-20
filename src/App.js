@@ -113,6 +113,28 @@ function App() {
     }
   }
 
+
+  async function markAsUsed() {
+    // función nos va a permitir marcar o indicar una palabra como usada
+    // utilizando la función useWord() de nuestro smart contract
+    if (!randomWord) return;
+
+    if (typeof window.ethereum !== "undefined") {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        criptdleAddress,
+        Criptdle.abi,
+        signer
+      );
+
+      const transaction = await contract.useWord(randomWord);
+      await transaction.wait();
+
+    }
+  }
+
   return (
     <div className="App">
       <button onClick={fetchWords}>Ver todas las palabras</button>
@@ -152,6 +174,11 @@ function App() {
       <button onClick={checkIfIsUsed}>¿Se usó esta palabra?</button>
       <br />
       {isUsed}
+
+      <br />
+      <br />
+
+      <button onClick={markAsUsed}>Marcar la palabra como usada</button>
     </div>
   );
 }
